@@ -12,7 +12,55 @@
         return result;
       }
     </script>
-    <title>The Guiding Lanterns</title>
+    <style>
+      body {
+        background: url("https://cdn.discordapp.com/attachments/585859835527036943/592309600276054027/screenshot.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      header, footer {
+        text-align: center;
+        font-weight: bold;
+        color: coral;
+        font-family:"Trebuchet MS", Helvetica, sans-serif;
+      }
+
+
+      pre {
+        background-color:rgba(36, 36, 36, 0.8);
+        overflow:auto;
+        margin:0 0 1em;
+        padding:.5em 1em;
+      }
+
+      pre code,
+      pre .line-number {
+        font:normal normal 12px/14px "Courier New",Courier,Monospace;
+        font-size: medium;
+        color:rgb(255, 255, 255);
+        display:block;
+      }
+
+       pre .line-number {
+        float:left;
+        margin:0 1em 0 -1em;
+        border-right:1px solid;
+        text-align:right;
+       }
+
+        pre .line-number span {
+        display:block;
+        padding:0 .5em 0 1em;
+       }
+
+        pre .cl {
+        display:block;
+        clear:both;
+       }
+    </style>
+
+    <title>The Guiding Lanterns - All commands</title>
     <link rel="icon" href="https://raw.githubusercontent.com/Guiding-Lanterns/Guiding-Lanterns/master/icon1.png">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,15 +69,34 @@
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://guiding-lanterns.greep.cf" />
 		<meta property="og:image" content="https://raw.githubusercontent.com/Guiding-Lanterns/Guiding-Lanterns/master/icon1.png" />
-		<meta property="og:description" content="The Guiding Lanterns, a Discord bot that has been interested in Disney" />
+    <meta property="og:description" content="The Guiding Lanterns, a Discord bot that has been interested in Disney.
+    List of commands." />
   </head>
   <body>
+    <header>
+      <h1><b>The Guiding Lanterns</b></h1>
+    </header>
+
 	  <!-- pre and code style was used on https://jsfiddle.net/tovic/AbpRD/ -->
-	  <pre id="file"></pre>
+	  <pre><code id="file"></code></pre id="file">
 	  <script>
 		  var file = loadFile('https://raw.githubusercontent.com/Guiding-Lanterns/Guiding-Lanterns/master/cmds/readme.txt');
 		  var x = document.getElementById("file");
-		  x.innerHTML = file;
-	  </script>
+      x.innerHTML = file;
+      var pre = document.getElementsByTagName('pre')
+      pl = pre.length;
+      for (var i = 0; i < pl; i++) {
+        pre[i].innerHTML = '<span class="line-number"></span>' + pre[i].innerHTML + '<span class="cl"></span>';
+        var num = pre[i].innerHTML.split(/\n/).length;
+        for (var j = 0; j < num; j++) {
+            var line_num = pre[i].getElementsByTagName('span')[0];
+            line_num.innerHTML += '<span>' + (j + 1) + '</span>';
+        }
+      }
+    </script>
+    
+    <footer>
+      <a href="https://discordbots.org/bot/569624646475972608" ><img src="https://discordbots.org/api/widget/569624646475972608.svg" alt="Invite The Guiding Lanterns" /></a>
+    </footer>
   </body>
 </html>
