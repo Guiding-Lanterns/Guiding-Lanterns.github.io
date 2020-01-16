@@ -1,5 +1,8 @@
 <html>
   <head>
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/highlightjs/highlight.js/master/src/styles/default.css">
+    <script src="https://raw.githubusercontent.com/highlightjs/highlight.js/master/src/highlight.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script>
       function loadFile(filePath) {
         var result = null;
@@ -78,7 +81,7 @@
     </header>
 
 	  <!-- pre and code style was used on https://jsfiddle.net/tovic/AbpRD/ -->
-	  <pre><code id="file"></code></pre id="file">
+	  <pre><code id="file" class="plaintext"></code></pre>
 	  <script>
 		  var file = loadFile('https://raw.githubusercontent.com/Guiding-Lanterns/Guiding-Lanterns/master/cmds/readme.txt');
 		  var x = document.getElementById("file");
