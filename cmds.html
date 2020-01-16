@@ -1,8 +1,5 @@
 <html>
   <head>
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/highlightjs/highlight.js/master/src/styles/default.css">
-    <script src="https://raw.githubusercontent.com/highlightjs/highlight.js/master/src/highlight.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script>
       function loadFile(filePath) {
         var result = null;
@@ -80,8 +77,9 @@
       <h1><b>The Guiding Lanterns</b></h1>
     </header>
 
+	  <link rel="stylesheet" href="https://gistfy.mods.nyc/assets/styles/gistfy.monokai_sublime.min.css">
 	  <!-- pre and code style was used on https://jsfiddle.net/tovic/AbpRD/ -->
-	  <pre><code id="file" class="plaintext"></code></pre>
+	  <pre><code id="file"></code></pre>
 	  <script>
 		  var file = loadFile('https://raw.githubusercontent.com/Guiding-Lanterns/Guiding-Lanterns/master/cmds/readme.txt');
 		  var x = document.getElementById("file");
