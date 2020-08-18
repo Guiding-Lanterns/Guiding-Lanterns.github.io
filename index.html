@@ -1,72 +1,141 @@
+<!DOCTYPE html>
 <html>
-<!--
-  This HTML script is for the detailled description of the GitHub repo and for Discord Bot List, available at https://discordbots.org/bot/569624646475972608
-	Script by Ajam#3022
--->
-	<head>
-		<title>The Guiding Lanterns</title>
-		<link rel="icon" href="https://raw.githubusercontent.com/Guiding-Lanterns/Guiding-Lanterns/master/icon1.png">
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		<meta property="og:title" content="The Guiding Lanterns" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://guiding-lanterns.greep.cf" />
-		<meta property="og:image" content="https://raw.githubusercontent.com/Guiding-Lanterns/Guiding-Lanterns/master/icon1.png" />
-		<meta property="og:description" content="The Guiding Lanterns, a Discord bot that has been interested in Disney" />
-	</head>
+<head>
+<title>The Guiding Lanterns</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" shrink-to-fit="no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Guiding-Lanterns/Guiding-Lanterns/master/icon1.png">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/custom-responsive-style.css">
+<script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="scripts/plugin-active.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/showdownjs/showdown/1.9.1/dist/showdown.min.js"></script>
+<script>
+  function loadFile(filePath) {
+    var result = null;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", filePath, false);
+    xmlhttp.send();
+    if (xmlhttp.status==200) {
+      result = xmlhttp.responseText;
+    }
+    return result;
+  }
+</script>
 <style>
-body {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin: auto;
-    width: auto;
-    padding: auto;
-    color: #CCCCCC;
-    font-weight: bold;
-}
-.guiding {
-    text-align: center;
-}
-.commands {
-    text-align: center;
-}
-.discord {
-    text-align: center;
-}
+
+    .cmdstext {
+        text-align: center;
+        font-weight: bold;
+        color: coral;
+        font-family:"Trebuchet MS", Helvetica, sans-serif;
+    }
+
+  pre {
+    background-color:rgba(36, 36, 36, 0.8);
+    overflow:auto;
+    margin:0 0 1em;
+    padding:.5em 1em;
+  }
+
+  pre code,
+  pre .line-number {
+    font:normal normal 12px/14px "Courier New",Courier,Monospace;
+    font-size: medium;
+    color:rgb(255, 255, 255);
+    display:block;
+  }
+
+   pre .line-number {
+    float:left;
+    margin:0 1em 0 -1em;
+    border-right:1px solid;
+    text-align:right;
+   }
+
+    pre .line-number span {
+    display:block;
+    padding:0 .5em 0 1em;
+   }
+
+    pre .cl {
+    display:block;
+    clear:both;
+   }
 </style>
-<body background="https://media.discordapp.net/attachments/592623825188028417/592625280980353024/screenshot.png">
-  <div class=guiding>
-    <h1><u>The Guiding Lanterns</u></h1>
-    <h2><i>(Known as Corona's Lanterns)</i></h2>
-    <h2>Official bot of the <a href="https://discord.gg/BunQeKh">Kingdom of Corona</a></h2>
-    <hr>
-    <p>Hello! This is <u>The Guiding Lanterns</u>, a bot created by Greep#3022
-    and Ajam#3536.</p>
-    <p>The Guiding Lanterns is a bot that has been interested in Disney, most Disney movies and series</p>
+
+</head>
+<body>
+  <header>
+    <div class="mobile-logo">
+    <a href=""><img src="https://raw.githubusercontent.com/Guiding-Lanterns/Guiding-Lanterns/master/icon1.png"></a>
   </div>
-  <div class=commands>
-    <hr>
-    <h2>List of commands:</h2>
-    <p>All comands are available using <i>!help</i> or <i>@The Guiding Lanterns help</i></p>
+  <a class="menu-toggle rounded" href="#">
+    <i class="fa fa-bars"></i>
+  </a>
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a class="smooth-scroll" href="#Banner"><img src="https://cdn.discordapp.com/attachments/668512984791908362/745349238438887586/emote.png" style="width:40px; height: auto;"></a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="smooth-scroll" href="#README">About</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="smooth-scroll" href="#Commands">Commands</a>
+      </li>
+    </ul>
+  </nav>
+  </header>
+<section id="Banner">
+  <div class="logo">
+    <img src="https://cdn.discordapp.com/attachments/668512984791908362/745349238438887586/emote.png" style="width:120%; height: auto;">
   </div>
-  <div class=guiding>
-    <hr>
-    <h2>About the devs:</h2>
-    <p>Hi, I'm Greep and I'm the creator of The Guiding Lanterns.</p>
-	<p>Me and Ajam are developing The Guiding Lanterns, the unofficial Disney bot. This bot was hosted for now in France.</p>
-	<p>We aim to be able to develop the bot and if possible to make it public if there are people interested</p>
-	<p>If there are people interested in contributing to the code, join the development server! You just need to know yourself well in JavaScript and especially at the Discord.js library.</p>
+  <div class="blacksection">
+    <h1>The<br>Guiding<br>Lanterns</h1><br><a class="mscroll btn btn-primary page-scroll" href="add"><h4><b>Invite in your Discord server</b> > </h4></a>
   </div>
-  <div class=discord>
-    <hr>
-    <a href="https://discord.gg/BunQeKh"><img src="https://discordapp.com/api/guilds/562602234265731080/embed.png?style=banner4" alt="Join the Kingdom of Corona server"></a>
-    <a href="https://discord.gg/5QCQpr9"><img src="https://discordapp.com/api/guilds/570024448371982373/embed.png?style=banner4" alt="Join the developemnt server"></a>
+</section>
+<div style="text-align: center;">
+<section id="README">
+  <div class="container">
+	  <p id="file"></p>
+	  <script>
+		  var file = loadFile('https://raw.githubusercontent.com/Guiding-Lanterns/Guiding-Lanterns/master/README.md');
+		  var x = document.getElementById("file");
+      var converter = new showdown.Converter()
+      var html      = converter.makeHtml(file);
+      x.innerHTML = html;
+    </script>
   </div>
-  <div class=discord>
-    <hr>
-    <a href="https://discordbots.org/bot/569624646475972608" ><img src="https://discordbots.org/api/widget/569624646475972608.svg" alt="Invite The Guiding Lanterns" /></a>
+</section>
+<br>
+<section id="Commands">
+  <div class="container">
+  <link rel="stylesheet" href="https://gistfy.mods.nyc/assets/styles/gistfy.monokai_sublime.min.css">
+    <!-- pre and code style was used on https://jsfiddle.net/tovic/AbpRD/ -->
+    <p class="cmdstext"><h1><b>Commands</b></h1></p>
+  <div style="text-align: initial;"><pre><code id="cmds"></code></pre></div>
+	  <script>
+		  var file = loadFile('https://raw.githubusercontent.com/Guiding-Lanterns/Guiding-Lanterns/master/cmds/readme.txt');
+		  var z = document.getElementById("cmds");
+      z.innerHTML = file;
+      var pre = document.getElementsByTagName('pre')
+      pl = pre.length;
+      for (var i = 0; i < pl; i++) {
+        pre[i].innerHTML = '<span class="line-number"></span>' + pre[i].innerHTML + '<span class="cl"></span>';
+        var num = pre[i].innerHTML.split(/\n/).length;
+        for (var j = 0; j < num; j++) {
+            var line_num = pre[i].getElementsByTagName('span')[0];
+            line_num.innerHTML += '<span>' + (j + 1) + '</span>';
+        }
+      }
+    </script>
   </div>
+</section>
+</div>
+ <div class="copyright"><p>Website by Greep - © 2020</p>
+</div>
 </body>
 </html>
